@@ -36,7 +36,7 @@ uninstall)
 
 run)
 	echo "Running"
-	R CMD BATCH --vanilla analysis/analysis.R 
+	R CMD BATCH analysis/analysis.R 
 	cat analysis.Rout
 	rm analysis.Rout
 	cp web/categories_network.png "$target_dir/MyApp"
