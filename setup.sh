@@ -15,9 +15,9 @@ case $cmd in
 install)
 	echo "Installing"
 
-	mysql -u $user < db/ecommerce.sql
-	mysql -u $user < data/ecommerce-dump.sql
-	mysql -u $user < analysis/Customers_by_product.sql
+	mysql -u $user -p$pswd < db/ecommerce.sql
+	mysql -u $user -p$pswd < data/ecommerce-dump.sql
+	mysql -u $user -p$pswd < analysis/Customers_by_product.sql
 
 	mkdir -p "$target_dir/MyApp"
 	cp -rf web/* "$target_dir/MyApp"
